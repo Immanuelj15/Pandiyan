@@ -22,7 +22,6 @@ export default function Contact() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    document.title = "Get a Quote | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Contact Pandyan Industrial Equipments Pvt. Ltd. in Chennai to submit drawings and receive quotes for VTL turning, horizontal boring, and heavy machinery spares.");

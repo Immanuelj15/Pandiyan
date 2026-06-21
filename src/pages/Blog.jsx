@@ -11,7 +11,6 @@ export default function Blog() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    document.title = "Industrial Machining Insights & Publications | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Browse our detailed insights and publications on vertical turning, precision tolerances, heavy industrial components, and quality inspection protocols.");

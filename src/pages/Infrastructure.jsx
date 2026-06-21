@@ -3,9 +3,13 @@ import { CheckCircle, ShieldCheck, Scale, Cpu, RotateCw, Sliders, Wrench, ArrowR
 import ScrollReveal from '../components/ScrollReveal';
 import TypewriterReveal from '../components/TypewriterReveal';
 import MagneticButton from '../components/MagneticButton';
-import eotCraneImg from '../assets/eot_crane.png';
-import jibCraneImg from '../assets/jib_crane.png';
-import chainPulleyImg from '../assets/chain_pulley.png';
+import machineVtlLarge from '../assets/machine_vtl_large.jpg';
+import machineBoring from '../assets/machine_boring.jpg';
+import machineLathe from '../assets/machine_lathe.jpg';
+import machineBoring2 from '../assets/machine_boring_2.jpg';
+import machineVtlGreen from '../assets/machine_vtl_green.jpg';
+import machineCustom1 from '../assets/machine_custom_1.jpg';
+import machineCustom2 from '../assets/machine_custom_2.jpg';
 import bearingShellImg from '../assets/bearing_shell.webp';
 import shaftRotorImg from '../assets/shaft_rotor.webp';
 import supportRollerImg from '../assets/support_roller.webp';
@@ -608,7 +612,6 @@ export default function Infrastructure() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    document.title = "Infrastructure & Major Machinery Directory | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "View our 8,000 sq.ft facility layout in Chennai, major VTL and boring machines directory, and quality control inspection lab tools.");
@@ -619,26 +622,7 @@ export default function Infrastructure() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const cranes = [
-    {
-      type: 'EOT Cranes',
-      desc: 'Double girder heavy-duty overhead travel cranes for loading, unloading, and positioning massive machine components.',
-      capacities: ['20 Ton Capacity (Main Bay)', '10 Ton Capacity (Auxiliary Bay)'],
-      img: eotCraneImg
-    },
-    {
-      type: 'Jib Cranes',
-      desc: 'Pillar-mounted wall bracket cranes providing localized handling support at specific heavy machinery centers.',
-      capacities: ['2 Ton Capacity (VTL Station 1)', '1 Ton Capacity (Boring Station)'],
-      img: jibCraneImg
-    },
-    {
-      type: 'Chain Pulley Blocks',
-      desc: 'High-strength spur gear blocks for manually controlled micro-alignments and tooling installations.',
-      capacities: ['5 Ton Capacity (Medium Bay)', '1 Ton Capacity (Tool Crib)'],
-      img: chainPulleyImg
-    }
-  ];
+
 
   const machinery = [
     {
@@ -647,7 +631,7 @@ export default function Infrastructure() {
       spec: 'Max Table Dia: 2500 mm | Max Turning Height: 1600 mm',
       qty: '1 Unit',
       control: 'CNC Controlled (Siemens 828D)',
-      img: bearingShellImg,
+      img: machineVtlLarge,
       icon: <RotateCw className="h-6 w-6" />
     },
     {
@@ -656,7 +640,7 @@ export default function Infrastructure() {
       spec: 'Max Table Dia: 2000 mm | Max Turning Height: 1250 mm',
       qty: '1 Unit',
       control: 'Manual / DRO',
-      img: supportRollerImg,
+      img: machineBoring,
       icon: <RotateCw className="h-6 w-6" />
     },
     {
@@ -665,7 +649,7 @@ export default function Infrastructure() {
       spec: 'Max Table Dia: 1600 mm | Max Turning Height: 1000 mm',
       qty: '1 Unit',
       control: 'CNC Controlled (Fanuc)',
-      img: valveMachiningImg,
+      img: machineLathe,
       icon: <RotateCw className="h-6 w-6" />
     },
     {
@@ -674,7 +658,7 @@ export default function Infrastructure() {
       spec: 'Spindle Dia: 100 mm | Table: 1250 x 1250 mm | Travel: X=1600 Y=1200 Z=1000',
       qty: '1 Unit',
       control: 'Heavy Duty / DRO Equipped',
-      img: shaftRotorImg,
+      img: machineBoring2,
       icon: <Sliders className="h-6 w-6" />
     },
     {
@@ -683,8 +667,28 @@ export default function Infrastructure() {
       spec: 'Distance between Centers: 3000 mm | Swing over bed: 800 mm',
       qty: '1 Unit',
       control: 'Manual / Precision Lathe',
-      img: htdGearsImg,
+      img: machineVtlGreen,
       icon: <Settings className="h-6 w-6" />
+    },
+    {
+      name: 'Heavy Double-Column VTL',
+      type: 'Vertical Turning Lathe',
+      spec: 'Massive component turning and facing capabilities',
+      qty: '1 Unit',
+      control: 'Heavy Duty Control',
+      img: machineCustom1,
+      naturalSize: true,
+      icon: <RotateCw className="h-6 w-6" />
+    },
+    {
+      name: 'Large Floor Boring Mill',
+      type: 'Boring & Milling',
+      spec: 'Deep hole boring and precision milling for heavy castings',
+      qty: '1 Unit',
+      control: 'Precision DRO',
+      img: machineCustom2,
+      naturalSize: true,
+      icon: <Sliders className="h-6 w-6" />
     }
   ];
 
@@ -792,23 +796,62 @@ export default function Infrastructure() {
         <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <ScrollReveal animation="fade-up">
             <div className="text-center max-w-3xl mx-auto mb-10">
-              <span className="text-xs font-bold tracking-widest text-brand-blue uppercase bg-brand-blue/8 border border-brand-blue/20 px-4 py-1.5 rounded-full inline-block mb-4">
+              <span className="text-xs font-black tracking-widest text-brand-blue uppercase bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full inline-block mb-4 shadow-sm">
                 Shop Floor Gallery
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 drop-shadow-sm">
                 Inside Our <span className="text-brand-blue">Manufacturing Floor</span>
               </h2>
               <div className="h-1 w-14 bg-brand-blue mx-auto mb-4" />
-              <p className="text-base text-slate-500 leading-relaxed">
+              <p className="text-base sm:text-lg text-slate-700 font-medium leading-relaxed max-w-2xl mx-auto">
                 Real shots from our Chennai facility — heavy components being machined, inspected and dispatched to clients across India.
               </p>
             </div>
           </ScrollReveal>
 
-          {/* THE SLIDER */}
-          <ScrollReveal animation="fade-up" delay={150}>
-            <ParallaxSlider />
-          </ScrollReveal>
+          {/* THE GALLERY GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mt-8">
+            {gallerySlides.map((slide, i) => {
+              const isLarge = i < 2; // First two items take 3 columns, next three take 2 columns
+              return (
+                <ScrollReveal 
+                  key={i} 
+                  animation="fade-up" 
+                  delay={i * 100}
+                  className={`relative group overflow-hidden rounded-3xl shadow-sm hover:shadow-2xl border border-slate-200 h-72 sm:h-80 transition-all duration-500 ${isLarge ? 'lg:col-span-3' : 'lg:col-span-2'}`}
+                >
+                  {/* Image */}
+                  <img 
+                    src={slide.img} 
+                    alt={slide.label} 
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out" 
+                  />
+                  
+                  {/* Gradient Overlay - Darkened for perfect text contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/80 to-transparent pointer-events-none opacity-100" />
+                  
+                  {/* Text Content - Always visible, purely white */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                    <span className="text-[10px] font-black text-sky-300 uppercase tracking-widest bg-slate-900/50 backdrop-blur-md px-3 py-1 rounded-full border border-sky-300/30 inline-block mb-3 shadow-sm">
+                      Inside Facility
+                    </span>
+                    <h3 
+                      className="text-white font-extrabold text-xl sm:text-2xl mb-2 drop-shadow-[0_4px_4px_rgba(0,0,0,1)] leading-tight"
+                      style={{ color: '#ffffff' }}
+                    >
+                      {slide.label}
+                    </h3>
+                    <p 
+                      className="text-white text-sm font-medium line-clamp-2 leading-relaxed max-w-sm drop-shadow-[0_2px_2px_rgba(0,0,0,1)]"
+                      style={{ color: '#ffffff' }}
+                    >
+                      {slide.caption}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
 
           {/* Marquee strip */}
           <div className="mt-10 border-t border-b border-slate-200">
@@ -818,82 +861,6 @@ export default function Infrastructure() {
       </section>
 
 
-      {/* ══════════════════════════════════
-          MATERIAL LOGISTICS (CRANES)
-      ══════════════════════════════════ */}
-      <section className="py-20 bg-white relative overflow-hidden border-b border-slate-100">
-        <div
-          className="absolute inset-0 bg-small-grid pointer-events-none select-none z-0"
-          style={{ transform: `translateY(${(scrollY - 300) * 0.05}px)` }}
-        />
-        <div className="absolute -top-24 left-1/4 w-96 h-96 rounded-full blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 70%)' }} />
-        <div className="absolute -bottom-24 right-1/4 w-80 h-80 rounded-full blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(14,165,233,0.05) 0%, transparent 70%)' }} />
-
-        <div className="max-w-[95%] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <ScrollReveal animation="fade-up">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-bold tracking-widest text-brand-blue uppercase bg-brand-blue/8 border border-brand-blue/20 px-4 py-1.5 rounded-full inline-block mb-4">
-                Material Logistics
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-                Material Handling Capabilities
-              </h2>
-              <div className="h-1 w-14 bg-brand-blue mx-auto mb-4" />
-              <p className="text-base text-slate-500 leading-relaxed">
-                To support heavy machining of cement, sugar, and valve spares, we maintain advanced overhead and local cranes for zero-damage positioning.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {cranes.map((crane, idx) => (
-              <ScrollReveal key={idx} animation="fade-up" delay={idx * 100} className="h-full flex">
-                <div className="group bg-white border border-slate-200 rounded-2xl overflow-hidden flex flex-col w-full shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-400">
-                  <div className="h-1 w-full bg-gradient-to-r from-blue-500 via-brand-blue to-sky-400 group-hover:h-1.5 transition-all duration-300" />
-                  <div className="relative h-56 overflow-hidden bg-slate-900">
-                    <img
-                      src={crane.img}
-                      alt={crane.type}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-85 group-hover:opacity-100"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent pointer-events-none" />
-                    <span className="absolute top-4 left-4 bg-brand-blue/90 text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md text-white shadow-md">
-                      Logistics Asset
-                    </span>
-                  </div>
-
-                  <div className="p-7 flex flex-col flex-1">
-                    <div className="flex justify-end mb-3">
-                      <span className="text-5xl font-black text-slate-100 group-hover:text-blue-100/60 leading-none select-none transition-colors duration-300">
-                        {String(idx + 1).padStart(2, '0')}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-blue transition-colors duration-300">
-                      {crane.type}
-                    </h3>
-                    <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-1">{crane.desc}</p>
-
-                    <div className="border-t border-slate-100 pt-5 space-y-3">
-                      <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">
-                        Available Capacities
-                      </span>
-                      {crane.capacities.map((cap, cIdx) => (
-                        <div key={cIdx} className="flex items-center text-xs text-slate-600 bg-slate-50 px-3 py-2.5 rounded-xl border border-slate-100 font-semibold gap-2">
-                          <CheckCircle className="h-4 w-4 text-brand-blue shrink-0" />
-                          <span>{cap}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ══════════════════════════════════
           HEAVY MACHINERY DIRECTORY
@@ -932,7 +899,7 @@ export default function Infrastructure() {
                       : 'bg-gradient-to-r from-slate-400 via-slate-500 to-slate-600 group-hover:h-1.5'
                   }`} />
 
-                  <div className="relative h-48 w-full overflow-hidden bg-slate-950">
+                  <div className="relative w-full h-60 overflow-hidden bg-slate-950">
                     <img
                       src={mach.img}
                       alt={mach.name}
@@ -942,10 +909,7 @@ export default function Infrastructure() {
                   </div>
 
                   <div className="p-7 flex flex-col flex-1">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="bg-brand-blue/8 p-3 rounded-xl text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-300">
-                        {mach.icon}
-                      </div>
+                    <div className="flex justify-end mb-4">
                       <span className="text-xs font-bold bg-slate-100 border border-slate-200 text-slate-700 px-3 py-1 rounded-md">
                         {mach.qty}
                       </span>

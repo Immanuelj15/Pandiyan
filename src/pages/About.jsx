@@ -17,7 +17,6 @@ export default function About() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    document.title = "About Our Journey & Leadership | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Learn about the history of Pandyan Industrial Equipments Pvt. Ltd. established in 2005 in Chennai, our mission, vision, and leadership profiles.");

@@ -40,7 +40,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    document.title = "Precision Heavy Machining & Engineering | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Pandyan Industrial Equipments Pvt. Ltd. in Chennai specializes in heavy machining, VTL turning, and custom spares for Cement, Sugar, and Valve industries.");

@@ -18,7 +18,6 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState('All');
 
   useEffect(() => {
-    document.title = "Industrial Projects & Assemblies Portfolio | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Explore our portfolio of machined assemblies including support rollers, bearing shells, shaft & rotor assemblies, and valve components.");

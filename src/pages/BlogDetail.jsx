@@ -10,7 +10,6 @@ export default function BlogDetail() {
 
   useEffect(() => {
     if (post) {
-      document.title = `${post.title} | Pandyan Industrial Equipments`;
       window.scrollTo(0, 0);
     }
   }, [post]);

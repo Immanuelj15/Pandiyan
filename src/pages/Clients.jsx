@@ -14,7 +14,6 @@ export default function Clients() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    document.title = "Quality (ISO 9001:2015) | Pandyan Industrial Equipments Pvt. Ltd.";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Discover our valued clients like L&T, Flowserve, KCP, and FLSmidth, and our ISO 9001:2015 certified quality checking procedures.");
